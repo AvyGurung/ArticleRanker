@@ -6,18 +6,39 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Article Rater</title>
-    <script type="text/javascript" src="script.js"></script>
+    
 </head>
 <body>
     <div class="container">
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Article Number</th>
                     <th>Article</th>
-                    <th>Rating</th>
+                    <th>Rate</th>
                 </tr>
             </thead>
             <tbody>
+                <tr class="no1">
+                    <td>Article 1</td>
+                    <td id="output">Article 1 goes here</td>
+                    <td>
+                        <input type="button" id="article1" value="Rate Article 1" onclick="btn_Article1">
+                        <script src="loadArt1.js"></script>
+                    </td>
+                    
+                </tr>
+
+                <tr class="no2">
+                    <td>Article 2</td>
+                    <td id="output2">Article 2 goes here</td>
+                    <td>
+                        <input type="button" id="article2" value="Rate Article 2" onclick="btn_Article1">
+                        <script src="loadArt2.js"></script>
+                    </td>
+                    
+                </tr>
+                
                 
             </tbody>
         </table>
