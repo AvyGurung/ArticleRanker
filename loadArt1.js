@@ -30,6 +30,13 @@ function LoadArt1(){
     ajaxhttp.send(null);
 
     output.innerHTML = "Loading article 1"
+    btnarticle1h.disabled = false;
+}
+
+function HideArt1(){
+    var output = document.getElementById('output1');
+    output.innerHTML = "Article 1 goes here"
+    btnarticle1h.disabled = true;
 }
 
 

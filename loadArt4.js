@@ -1,7 +1,7 @@
 function LoadArt4(){
     var output = document.getElementById('output4');
     var ajaxhttp = new XMLHttpRequest();
-    //var url ="https://api.myjson.com/bins/1enr2m"; 
+    //var url ="https://api.myjson.com/bins/s9uq6"; 
     //online source ^
     var url ="../data/article-4.json";
 
@@ -33,4 +33,12 @@ function LoadArt4(){
     ajaxhttp.send(null);
 
     output.innerHTML = "Loading article 4"
+    btnarticle4h.disabled = false;
 }
+
+function HideArt4(){
+    var output = document.getElementById('output4');
+    output.innerHTML = "Article 4 goes here"
+    btnarticle4h.disabled = true;
+}
+

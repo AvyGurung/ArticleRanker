@@ -7,8 +7,15 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Article Rater</title>
     
+    <center>
+        <h1>Article Rater</h1>
+    </center>
+    
 </head>
 <body>
+    <style>
+        
+    </style>
     <div class="container">
         <table class="table table-striped">
             <thead>
@@ -24,6 +31,7 @@
                     <td id="output1">Article 1 goes here</td>
                     <td>
                         <input type="button" id="btnarticle1" value="View Article 1" onclick="LoadArt1()">
+                        <input type="button" id="btnarticle1h" value="Hide Article 1" onclick="HideArt1()" disabled>
                         <script src="loadArt1.js"></script>
                     </td>
                     
@@ -34,6 +42,7 @@
                     <td id="output2">Article 2 goes here</td>
                     <td>
                         <input type="button" id="btnarticle2" value="View Article 2" onclick="LoadArt2()">
+                        <input type="button" id="btnarticle2h" value="Hide Article 2" onclick="HideArt2()" disabled>
                         <script src="loadArt2.js"></script>
                     </td>
                     
@@ -44,6 +53,7 @@
                     <td id="output3">Article 3 goes here</td>
                     <td>
                         <input type="button" id="btnarticle3" value="View Article 3" onclick="LoadArt3()">
+                        <input type="button" id="btnarticle3h" value="Hide Article 3" onclick="HideArt3()" disabled>
                         <script src="loadArt3.js"></script>
                     </td>
                     
@@ -54,7 +64,19 @@
                     <td id="output4">Article 4 goes here</td>
                     <td>
                         <input type="button" id="btnarticle4" value="View Article 4" onclick="LoadArt4()">
+                        <input type="button" id="btnarticle4h" value="Hide Article 4" onclick="HideArt4()" disabled>
                         <script src="loadArt4.js"></script>
+                    </td>
+                    
+                </tr>
+
+                <tr class="no5">
+                    <td>Article 5</td>
+                    <td id="output5">Article 5 goes here</td>
+                    <td>
+                        <input type="button" id="btnarticle5" value="View Article 5" onclick="LoadArt5()">
+                        <input type="button" id="btnarticle5h" value="Hide Article 5" onclick="HideArt5()" disabled>
+                        <script src="loadArt5.js"></script>
                     </td>
                     
                 </tr>
@@ -63,9 +85,7 @@
             </tbody>
         </table>
     </div>
-
-
-
-    <p>Take a look at <a href="" target="_blank">article1.txt</a></p>
+    
 </body>
+
 </html>
