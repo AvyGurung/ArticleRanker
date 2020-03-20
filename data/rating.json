@@ -1,0 +1,20 @@
+{
+    "title":"",
+    "body":[
+        {
+            "Title":"Article1", "rating":5
+        },
+        {
+            "Title":"Article2", "rating":2
+        },
+        {
+            "Title":"Article3", "rating":4
+        },
+        {
+            "Title":"Article4", "rating":1
+        },
+        {
+            "Title":"Article5", "rating":3
+        }
+    ]
+}

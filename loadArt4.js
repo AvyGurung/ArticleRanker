@@ -3,18 +3,16 @@ function LoadArt4(){
     var ajaxhttp = new XMLHttpRequest();
     //var url ="https://api.myjson.com/bins/s9uq6"; 
     //online source ^
-    var url ="../data/article-4.json";
+    var url ="data/article-4.json";
 
     ajaxhttp.open("GET", url, true);
     ajaxhttp.setRequestHeader("content-type","application/json");
     ajaxhttp.onreadystatechange = function (){
-        if(ajaxhttp.readyState == 4 && ajaxhttp.status == 200){
+        try{
 
             var jarticle4 = JSON.parse(ajaxhttp.responseText);
             console.log(jarticle4);
-            console.log(ajaxhttp);
 
-            var output = document.getElementById('output4');
             output.innerHTML = jarticle4.title
             + '<BR>' + '<BR>' + jarticle4.body[0].model.text
             + '<BR>' + '<BR>' + jarticle4.body[1].model.text
@@ -28,6 +26,8 @@ function LoadArt4(){
             + '<BR>' + '<BR>' + jarticle4.body[5].model.text
             ;
             
+        } catch (e) {
+            console.warn("couldn't load ratings ");
         }
     }
     ajaxhttp.send(null);
@@ -40,5 +40,24 @@ function HideArt4(){
     var output = document.getElementById('output4');
     output.innerHTML = "Article 4 goes here"
     btnarticle4h.disabled = true;
+}
+
+function LoadRating4(){
+    var output = document.getElementById('ratingOutput4');
+    var ajaxhttp = new XMLHttpRequest()
+    var url ="data/rating.json"
+
+    ajaxhttp.open("GET", url, true);
+    ajaxhttp.setRequestHeader("content-type","application/json");
+    ajaxhttp.onreadystatechange = function (){
+        if (ajaxhttp.readyState === 4 && ajaxhttp.status === 200) {
+            var jratings = JSON.parse(ajaxhttp.responseText);
+
+            console.log(jratings);
+
+            output.innerHTML = jratings.body[3].rating;
+        } 
+    };
+    ajaxhttp.send(null);
 }
 
