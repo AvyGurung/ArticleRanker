@@ -38,7 +38,7 @@ function LoadArt5(){
 //allows user to hide articles they do not want to see.
 function HideArt5(){
     var output = document.getElementById('output5');
-    output.innerHTML = "Article 5 goes here"
+    output.innerHTML = "Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu"
     btnarticle5h.disabled = true;
 }
 

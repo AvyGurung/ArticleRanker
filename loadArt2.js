@@ -41,7 +41,7 @@ function LoadArt2(){
 //allows user to hide articles they do not want to see.
 function HideArt2(){
     var output = document.getElementById('output2');
-    output.innerHTML = "Article 2 goes here"
+    output.innerHTML = "Praesent bibendum nec velit a fringilla. Nulla facilisi"
     btnarticle2h.disabled = true;
 }
 
