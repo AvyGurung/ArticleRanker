@@ -37,6 +37,7 @@ function LoadArt3(){
 
     output.innerHTML = "Loading article 3"
     btnarticle3h.disabled = false;
+    Page=3
 }
 
 //this function hides the article.

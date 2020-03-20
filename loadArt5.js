@@ -32,6 +32,7 @@ function LoadArt5(){
 
     output.innerHTML = "Loading article 5"
     btnarticle5h.disabled = false;
+    Page=5;
 }
 
 //this function hides the article.

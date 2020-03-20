@@ -24,6 +24,7 @@
                     <th>Article</th>
                     <th>View</th>
                     <th>Article Rating</th>
+                    <input type="button" id="btnNext" value="View Next Article" onclick="ViewNext()">
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +34,7 @@
                     <td>
                         <input type="button" id="btnarticle1" value="View Article 1" onclick="LoadArt1()">
                         <input type="button" id="btnarticle1h" value="Hide Article 1" onclick="HideArt1()" disabled>
+                        
                     </td>
                     <td id="ratingOutput1">Article 1 Rating</td>
                     <td>
@@ -105,7 +107,7 @@
         </table>
     </div>
     <script type="text/javascript">
-
+        var Page = 0;
         //this function is used to load all the ratings when the website is opened
         function getAllRatings(){
             LoadRating1()
@@ -116,6 +118,25 @@
         }
         getAllRatings();
         
+        function ViewNext(){
+            if (Page == 0){
+                LoadArt1();
+            } else if (Page == 1){
+                LoadArt2();
+                HideArt1()
+            } else if (Page == 2){
+                LoadArt3();
+                HideArt2()
+            } else if (Page == 3){
+                LoadArt4();
+                HideArt3()
+            } else if (Page == 4){
+                LoadArt5();
+                HideArt4()
+            }
+        }
+
+        ViewNext();
     </script>
 </body>
 
