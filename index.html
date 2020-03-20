@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Article Rater</title>
+    <title>Article Ranker</title>
     
     <center>
-        <h1>Article Rater</h1>
+        <h1>Article Ranker</h1>
     </center>
     
 </head>
@@ -27,9 +27,6 @@
                 </tr>
             </thead>
             <tbody>
-                <div id="ratingHere">
-                    
-                </div>
                 <tr class="no1">
                     <td>1</td>
                     <td id="output1">Article 1 goes here</td>
@@ -38,8 +35,10 @@
                         <input type="button" id="btnarticle1h" value="Hide Article 1" onclick="HideArt1()" disabled>
                         
                     </td>
-                    <td id="ratingOutput1">Article 1 Rating
-                        <input type="button" id="btnrating1" value="View Rating 1" onclick="LoadRating1()">
+                    <td id="ratingOutput1">Article 1 Rating</td>
+                    <td>
+                        <input type="number" id="rating1" max="5" min="0" placeholder="1-5">
+                        <input type="button" id="btnrating1" value="Change Rating" onclick="UpdateArt1()">
                     </td>
                     <script src="loadArt1.js"></script>
                 </tr>
@@ -51,8 +50,10 @@
                         <input type="button" id="btnarticle2" value="View Article 2" onclick="LoadArt2()">
                         <input type="button" id="btnarticle2h" value="Hide Article 2" onclick="HideArt2()" disabled>
                     </td>
-                    <td id="ratingOutput2">Article 2 Rating
-                        <input type="button" id="btnrating2" value="View Rating 2" onclick="LoadRating2()">
+                    <td id="ratingOutput2">Article 2 Rating</td>
+                    <td>
+                        <input type="number" id="rating2" max="5" min="0" placeholder="1-5">
+                        <input type="button" id="btnrating2" value="Change Rating" onclick="UpdateArt2()">
                     </td>
                     <script src="loadArt2.js"></script>
                 </tr>
@@ -64,8 +65,10 @@
                         <input type="button" id="btnarticle3" value="View Article 3" onclick="LoadArt3()">
                         <input type="button" id="btnarticle3h" value="Hide Article 3" onclick="HideArt3()" disabled>
                     </td>
-                    <td id="ratingOutput3">Article 3 Rating
-                        <input type="button" id="btnrating" value="View Rating 3" onclick="LoadRating3()">
+                    <td id="ratingOutput3">Article 3 Rating</td>
+                    <td>
+                        <input type="number" id="rating3" max="5" min="0" placeholder="1-5">
+                        <input type="button" id="btnrating3" value="Change Rating" onclick="UpdateArt3()">
                     </td>
                     <script src="loadArt3.js"></script>
                 </tr>
@@ -77,8 +80,10 @@
                         <input type="button" id="btnarticle4" value="View Article 4" onclick="LoadArt4()">
                         <input type="button" id="btnarticle4h" value="Hide Article 4" onclick="HideArt4()" disabled>
                     </td>
-                    <td id="ratingOutput4">Article 4 Rating
-                        <input type="button" id="btnrating" value="View Rating 4" onclick="LoadRating4()">
+                    <td id="ratingOutput4">Article 4 Rating</td>
+                    <td>
+                        <input type="number" id="rating4" max="5" min="0" placeholder="1-5">
+                        <input type="button" id="btnrating4" value="Change Rating" onclick="UpdateArt4()">
                     </td>
                     <script src="loadArt4.js"></script>
                 </tr>
@@ -90,22 +95,28 @@
                         <input type="button" id="btnarticle5" value="View Article 5" onclick="LoadArt5()">
                         <input type="button" id="btnarticle5h" value="Hide Article 5" onclick="HideArt5()" disabled>
                     </td>
-                    <td id="ratingOutput5">Article 5 Rating
-                        <input type="button" id="btnrating" value="View Rating 5" onclick="LoadRating5()">
+                    <td id="ratingOutput5">Article 5 Rating</td>
+                    <td>
+                        <input type="number" id="rating5" max="5" min="0" placeholder="1-5">
+                        <input type="button" id="btnrating5" value="Change Rating" onclick="UpdateArt5()">
                     </td>
                     <script src="loadArt5.js"></script>
                 </tr>
-                
-                
             </tbody>
         </table>
     </div>
     <script type="text/javascript">
-        LoadRating1()
-        LoadRating2()
-        LoadRating3()
-        LoadRating4()
-        LoadRating5()
+
+        //this function is used to load all the ratings when the website is opened
+        function getAllRatings(){
+            LoadRating1()
+            LoadRating2()
+            LoadRating3()
+            LoadRating4()
+            LoadRating5()
+        }
+        getAllRatings();
+        
     </script>
 </body>
 

@@ -1,5 +1,8 @@
 //this file does nothing
 //planning on recalling this function to optimise my code if I have time
+//was thinking of using rat as a global variable that could be used identify the object in the json array.
+//I had it working but I could not get it to output in the correct place so I have reverted my code.
+
         var rat = 0;
         function FirstRat(){
             rat = 0;
