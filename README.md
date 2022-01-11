@@ -10,4 +10,4 @@ They also have the freedom to rate any article they wish at anytime.
 I was planning on optimising the code with for loops and recursive functions but did not have the time.
 
 This Website was written in HTML and JavaScript.
-It was developped using Visual Studio Code.
+It was developed using Visual Studio Code.
